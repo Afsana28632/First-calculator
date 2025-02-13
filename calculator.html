@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+button{
+    color: rgb(253, 252, 252);
+    width: 40%;
+    margin: 7px;
+    font-weight: bold;
+    background-color: rgb(0, 4, 8);
+    font-size: 30px
+}
+#main{
+    width: 400px;
+    height: auto;
+    text-align: center;
+  position: relative;
+  top: 150px;
+  margin: auto;
+  border: 2px solid black;
+  border-radius: 20px;
+  background-color: black
+}
+#result{
+    border: 1px solid black;
+    margin: 10px;
+    height: 100px;
+    background-color: rgba(160, 238, 212, 0.616)
+}
+#p01{
+    margin: 15px
+}
+#p02{
+    margin: 15px;
+    margin-left: 35px
+
+}
+
+</style>
+<body>
+
+<div id="main">
+ <div id="h1">
+     <h1 id="result"></h1>
+ </div>   
+ <div id="p01">
+     <input type="number" placeholder="Enter first number" id="1stinput">
+     <input type="number" placeholder="Enter second number" id="2ndinput">
+ </div>  
+    <div id="p02">
+        <button onclick="sum()">+</button>
+        <button onclick="minus()">-</button>
+        <button onclick="multiplication()">*</button>
+        <button onclick="division()">/</button>
+        <button onclick="remove()">C</button>
+    </div>
+</div>
+    <script>
+    function sum(){
+        let i1=Number(document.getElementById("1stinput").value);
+        let i2=Number(document.getElementById("2ndinput").value);
+        let result=i1+i2;
+        document.getElementById("result").innerHTML=result;
+    } 
+     function minus(){
+        let i1=Number(document.getElementById("1stinput").value);
+        let i2=Number(document.getElementById("2ndinput").value);
+        let result=i1-i2;
+        document.getElementById("result").innerHTML=result;
+    }
+    function multiplication(){
+        let i1=Number(document.getElementById("1stinput").value);
+        let i2=Number(document.getElementById("2ndinput").value);
+        let result=i1*i2;
+        document.getElementById("result").innerHTML=result;
+    }
+    function division(){
+        let i1=Number(document.getElementById("1stinput").value);
+        let i2=Number(document.getElementById("2ndinput").value);
+        let result=i1/i2;
+        document.getElementById("result").innerHTML=result;
+    }
+    function remove(){
+        document.getElementById("result").innerHTML=""
+    }
+    </script>
+
+</body>
+</html>
